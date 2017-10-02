@@ -11,13 +11,10 @@ gem 'bootstrap_sb_admin_base_v2'
 gem 'enum_help'
 
 #notify
-gem 'rails-assets-notify', source: 'https://rails-assets.org'
+gem 'rails-assets-bootstrap', '4.0.0.beta', source: 'https://rails-assets.org'
 
 #Minimal authorization through OO design and pure Ruby classes
 gem "pundit"
-
-#bootstrap
-gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
 
 #bootbox
 gem 'rails-assets-bootbox', source: 'https://rails-assets.org'
