@@ -1,8 +1,11 @@
 class Backoffice::AdminsController < BackofficeController
     before_action :set_admin, only: [:edit, :update, :destroy]
+    after_action :verify_authorized, only: :new
+    after_action :verify_policy_scoped, only: :index
   def index
     #@admins = Admin.all
-    @admins = Admin.with_full_access
+    #@admins = Admin.with_full_access
+    @admins = policy_scope(Admin)
   end
   def new
       @admin = Admin.new
@@ -31,6 +34,7 @@ class Backoffice::AdminsController < BackofficeController
     end
 
     if @admin.update(params_admin)
+        AdminMailer.update_email(current_admin, @admin).deliver_now
         redirect_to backoffice_admins_path, notice: "O Administrador  (#{@admin.email}) foi atualizado com sucesso! "
     else
         render:edit
@@ -38,6 +42,8 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def destroy
+    authorize @admin
+    admin_name = @admin.name
    if @admin.destroy
         redirect_to backoffice_admins_path, notice: "O Administrador  (#{@admin.email}) foi excluido com sucesso! "
     else
@@ -52,7 +58,7 @@ class Backoffice::AdminsController < BackofficeController
 
   private
   def params_admin
-    params.require(:admin).permit(:name, :email, :password, :password_confirmation)
+    params.require(:admin).permit(policy(@admin).permitted_attributes)
   end
 
 end

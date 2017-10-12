@@ -10,6 +10,9 @@ gem 'bootstrap_sb_admin_base_v2'
 #Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
 
+  # Bootstrap Notify
+  gem 'rails-assets-bootstrap.growl'
+
 #notify
 gem 'rails-assets-bootstrap', '4.0.0.beta', source: 'https://rails-assets.org'
 
@@ -38,6 +41,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'mailcatcher'
+  
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -71,5 +76,7 @@ group :development do
     gem "rails-erd"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  #Catches mail and serves it through a dream. http://mailcatcher.me
+  gem 'mailcatcher'
 end
 
