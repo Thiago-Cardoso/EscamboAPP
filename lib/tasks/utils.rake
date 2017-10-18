@@ -15,5 +15,22 @@ namespace :utils do
 
         puts "ADMINISTRADORES cadastrados com sucesso!"
   end
+
+  task generate_ads: :environment do
+
+    puts "Cria Anúncios Fake"
+
+    100.times do
+    Ad.create!(
+        title: Faker::Lorem.sentence([2,3,4,5].sample),
+        description:LeroleroGenerator.paragraph(Random.rand(3)),
+        member: Member.all.sample,
+        category:  Category.all.sample
+        )
+    end
+
+        puts "Anúncios cadastrados com sucesso!"
+  end
+
 end
  
