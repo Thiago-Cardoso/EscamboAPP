@@ -43,6 +43,10 @@ gem 'coffee-rails', '~> 4.1.0'
 
 #utililizado para simulacao de email
 gem 'mailcatcher'
+
+#Integration of RubyMoney - Money with Rails
+
+gem 'money-rails', '~>1'
   
 gem 'lerolero_generator'
 
