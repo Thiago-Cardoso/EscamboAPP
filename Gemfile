@@ -45,8 +45,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'mailcatcher'
 
 #Integration of RubyMoney - Money with Rails
-
 gem 'money-rails', '~>1'
+
+#paperclip
+gem "paperclip", "~> 5.0.0"
   
 gem 'lerolero_generator'
 

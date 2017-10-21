@@ -51,9 +51,9 @@
           </div>
        <div class="row">
         <% @ads.each do |ad|  %>
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-sm-4 col-lg-4 col-md-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                   <%= image_tag ad.picture.url(:medium) %>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#"><%= truncate(ad.title, lenght: 20) %></a>
