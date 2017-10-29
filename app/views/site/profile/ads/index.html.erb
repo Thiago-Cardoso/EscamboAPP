@@ -1,4 +1,4 @@
-<h1>Meus anúncios</h1>
+<h1>Listando Anúncios</h1>
 
 <table class="table table-hover">
     <thead>
@@ -8,16 +8,23 @@
             <th>Titulo</th>
             <th>Categoria</th>
             <th>Preço</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         <%  @ads.each do |ad| %>
         <tr>
-            <th scope="row"><%= ad.id %></th>
-            <th><%= image_tag ad.picture(:thumb) %></th>
-            <th><%= ad.title %></th>
-            <th><%= ad.category.description %></th>
-            <th><%= humanized_money_with_symbol ad.price %></th>
+            <td scope="row"><%= ad.id %></td>
+            <td><%= image_tag ad.picture(:thumb) %></td>
+            <td><%= ad.title %></td>
+            <td><%= ad.category.description %></td>
+            <td><%= humanized_money_with_symbol ad.price %></td>
+            <td>
+             <%= link_to edit_site_profile_ad_path(ad),
+                class:"btn btn-primary btn-circle" do %>
+                     <i class="fa fa-edit"></i>
+                <% end %>
+            </td>
         </tr>
         <% end %>
     </tbody>

@@ -19,6 +19,9 @@ gem 'rails-assets-bootstrap', '4.0.0.beta', source: 'https://rails-assets.org'
 #Minimal authorization through OO design and pure Ruby classes
 gem "pundit"
 
+#jQuery UI for the Rails asset pipeline
+gem 'jquery-ui-rails'
+
 #bootbox
 gem 'rails-assets-bootbox', source: 'https://rails-assets.org'
 

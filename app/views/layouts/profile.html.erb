@@ -12,9 +12,7 @@
       <%= stylesheet_link_tag    'application', media: 'all' %>
       <%= stylesheet_link_tag    'site', media: 'all' %>
       <%= stylesheet_link_tag    'site/profile', media: 'all' %>
-      <%= javascript_include_tag 'application' %>
-      <%= javascript_include_tag 'site' %>
-      <%= javascript_include_tag 'site/profile' %>
+
       <%= csrf_meta_tags %>
 
   </head>
@@ -33,6 +31,9 @@
                 </li>
                 <li>
                    <%= link_to "Meus anúncios", site_profile_ads_path %>
+                </li>
+                <li>
+                   <%= link_to "Novo anúncio", new_site_profile_ad_path %>
                 </li>
             </ul>
         </div>
@@ -61,6 +62,10 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
+
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_include_tag 'site' %>
+      <%= javascript_include_tag 'site/profile' %>
 
 </body>
 
