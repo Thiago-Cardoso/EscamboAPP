@@ -22,6 +22,9 @@ gem "pundit"
 #jQuery UI for the Rails asset pipeline
 gem 'jquery-ui-rails'
 
+
+ # Animate CSS
+  gem 'rails-assets-animate-css', source: 'https://rails-assets.org'
 #bootbox
 gem 'rails-assets-bootbox', source: 'https://rails-assets.org'
 

@@ -10,7 +10,7 @@
 
       <div class="row">
 
-        <div class="col-lg-3">
+        <div id="home-sidebar" class="col-lg-3">
 
           <h1 class="my-4-1">Categorias</h1>
           <div class="list-group">
@@ -21,7 +21,7 @@
         </div>
         <!-- /.col-lg-3 -->
 
-        <div class="col-lg-9">
+        <div id="home-detail" class="col-lg-9">
 
           <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -56,10 +56,10 @@
                    <%= image_tag ad.picture.url(:medium) %>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#"><%= truncate(ad.title, lenght: 20) %></a>
+                    <%= link_to truncate(ad.title, length: 20), site_ad_detail_path(ad), remote:true %>
                   </h4>
                   <h5><%= humanized_money_with_symbol ad.price %></h5>
-                  <p class="card-text"><%= truncate(ad.description, lenght:100) %></p>
+                  <p class="card-text"><%= truncate(ad.description, length:100) %></p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
