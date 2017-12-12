@@ -11,7 +11,7 @@ gem 'bootstrap_sb_admin_base_v2'
 gem 'enum_help'
 
   # Bootstrap Notify
-  gem 'rails-assets-bootstrap.growl'
+gem 'rails-assets-bootstrap.growl'
 
 #notify
 gem 'rails-assets-bootstrap', '4.0.0.beta', source: 'https://rails-assets.org'
@@ -24,9 +24,12 @@ gem 'jquery-ui-rails'
 
 
  # Animate CSS
-  gem 'rails-assets-animate-css', source: 'https://rails-assets.org'
+gem 'rails-assets-animate-css', source: 'https://rails-assets.org'
 #bootbox
 gem 'rails-assets-bootbox', source: 'https://rails-assets.org'
+
+#The safe Markdown parser, reloaded.
+gem 'redcarpet'
 
 #Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
 gem 'devise'
@@ -46,6 +49,15 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+#If Turbolinks are not enough for you. Wiselinks makes your application work faster.
+gem 'wiselinks'
+
+#gem kaminari - pagination
+gem 'kaminari'
+
+#Translations for the kaminari gem
+gem 'kaminari-i18n'
 
 #utililizado para simulacao de email
 gem 'mailcatcher'
@@ -67,6 +79,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+#FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord. 
+gem 'friendly_id'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

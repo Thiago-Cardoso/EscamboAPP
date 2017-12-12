@@ -1,0 +1,10 @@
+
+        <div id="home-sidebar" class="col-lg-3">
+
+          <h1 class="my-4-1">Categorias</h1>
+          <div class="list-group">
+            <%  @categories.each do |category| %>
+                        <%= link_to "#{category.description} (#{category.ads_count})", site_category_path(category), class:"list-group-item" %>
+             <% end %>
+          </div>
+        </div>
